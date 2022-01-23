@@ -1,0 +1,16 @@
+<div class="content" role="main">
+    <h2> Musicians </h2>
+    <p> Musicians, composers, and singers as varied as Beyonce Knowles, Ludwig van Beethoven, Michael Jackson, Freddie Mercury, Mozart, 
+        Eminem, Louis Armstrong, Justin Bieber and Elvis Presley have entertained and enthralled us for generations with their musical talents. </p>
+    <div class="search"> 
+        <input type="text" id="query" name="query"  #query> <button (click)="search(query.value)"> Search </button>
+    </div>
+    <div class="card-container" *ngIf="loading === defaultMusicians.length">
+        <span class="card" *ngFor="let musician of musicians">
+            <a [routerLink]="['/biography', musician.queryID]" >
+                <span> {{ musician.name }} </span>
+                <img src="{{ musician.thumbURL }}" alt="{{ musician.name }}"> 
+            </a>
+        </span>
+    </div>
+  </div>

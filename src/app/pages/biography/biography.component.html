@@ -1,0 +1,40 @@
+<div class="content" role="main">
+    <img src="{{ artist.wideThumbURL }}" alt="{{ artist.name }}" > 
+    <h1> {{ artist.name }} </h1>
+    <div *ngIf="artist.alternateName">
+        <strong> Alternate name: </strong> {{ artist.alternateName }}
+    </div>
+    <div *ngIf="artist.genre">
+        <strong> Genre: </strong> {{ artist.genre }}
+    </div>
+    <div *ngIf="artist.country">
+        <strong> Country: </strong> {{ artist.country }}
+    </div>
+    <div *ngIf="artist.musicStyle">
+        <strong> Music style: </strong> {{ artist.musicStyle }}
+    </div>
+    <div *ngIf="artist.musicGenre">
+        <strong> Music genre: </strong> {{ artist.musicGenre }}
+    </div>
+    <div *ngIf="artist.website">
+        <strong> Website: </strong> 
+        <a href="{{ website }}" target="_blank"> {{ artist.website }} </a>
+    </div>
+    <span class="biography-title"> Biography </span>
+    <div *ngIf="artist.banner">
+        <img src="{{ artist.banner }}" alt="banner"> 
+    </div>
+    <p> {{ artist.biography }} </p>
+    <div class="card-container" >
+        <span class="card" *ngFor="let pic of artist.picturesURL">
+            <a target="_blank" href="{{ pic }}" >
+                <img class="picture" src="{{ pic}}" alt="{{ artist.name }}"> 
+            </a>
+        </span>
+    </div>
+    <div *ngIf="artist.facebook">
+        <a target="_blank" href="{{ facebook }}" >
+            <img class="fb-icon" src="assets/icons/facebook.png" alt="facebook">
+        </a>     
+    </div>
+</div>
