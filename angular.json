@@ -1,4 +1,7 @@
 {
+  "glob": "_redirects",
+  "input": "src",
+  "output": "/",
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
     "analytics": "d6aa491e-a9f2-4b37-8737-ecdd45cc5d18"
